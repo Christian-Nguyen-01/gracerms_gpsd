@@ -75,6 +75,19 @@ class Registration implements IRegistration
 		$userId = $this->_userRepository->Add($user);
 		$this->AutoAssignPermissions($userId);
 
+                $addgroupname = Configuration::Instance()->GetKey(ConfigKeys::NEW_USER_GROUP);  
+
+		// Match group name to group_id
+		$addgroupid_res = ServiceLocator::GetDatabase()->Query(new AdHocCommand("select group_id from groups where name = '$addgroupname'"));
+		while ($row = $addgroupid_res->GetRow())
+		{
+			$addgroupid = $row['group_id'];
+		}
+
+                //Add user to group
+		if($addgroupid != NULL){
+			ServiceLocator::GetDatabase()->Execute(new AdHocCommand("insert into user_groups(user_id, group_id) VALUES ($userId, $addgroupid)"));
+		}
 		return $user;
 	}
 

@@ -131,6 +131,8 @@ class ConfigKeys
     const SECURITY_X_XSS = 'security.x-xss';
     const SECURITY_X_CONTENT_TYPE = 'security.x-content-type';
     const SECURITY_CONTENT_SECURITY_POLICY = 'security.content-security-policy';
+
+    const NEW_USER_GROUP = 'new.user.group';
 }
 
 class ConfigSection
