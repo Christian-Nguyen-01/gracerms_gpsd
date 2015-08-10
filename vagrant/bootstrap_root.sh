@@ -3,21 +3,23 @@
 # Vagrant uses this file to provision a new virtual machine.
 # See Vagrantfile.
 
-cd /vagrant
+cd /var/www/rms
+
+cp config/config.dist.php config/config.php
 
 # Install RPMs and gems
 echo "Installing yum packages..."
 yum install -y \
-        mysql-server \
         vim \
-        httpd \
         mod_php \
-        php-mysql \
         git
+        mysql-server \
+        httpd \
+        php-mysql \
 
+sed -i "s/bind-address.*=.*/bind-address = localhost/" /etc/my.cnf
 service mysqld start
 
-ln -s -T /vagrant/ /var/www/rms
 echo "Listen 9000
 <VirtualHost *:9000>
 DocumentRoot /var/www/rms
