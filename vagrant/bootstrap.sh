@@ -8,3 +8,5 @@ cd /vagrant
 cp config/config.dist.php config/config.php
 
 mysql -u root < database_schema/full-install.sql
+
+chmod a+w tpl tpl_c
