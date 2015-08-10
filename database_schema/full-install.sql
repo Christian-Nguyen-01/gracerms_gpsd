@@ -1,9 +1,9 @@
-DROP DATABASE IF EXISTS phpscheduleit2;
+DROP DATABASE IF EXISTS bookedscheduler;
 
-CREATE DATABASE phpscheduleit2;
+CREATE DATABASE bookedscheduler;
 
-USE phpscheduleit2;
-GRANT ALL on phpscheduleit2.* to 'schedule_user'@'127.0.0.1' identified by 'password';SET foreign_key_checks = 0;
+USE bookedscheduler;
+GRANT ALL on bookedscheduler.* to 'booked_user'@'127.0.0.1' identified by 'password';SET foreign_key_checks = 0;
 
 --
 -- Table structure for table `announcements`
@@ -795,3 +795,5 @@ insert into dbversion values('2.4', now());
 
 
 insert into dbversion values('2.5', now());
+
+INSERT INTO `users` (`user_id`, `fname`, `lname`, `username`, `email`, `password`, `salt`, `organization`, `position`, `phone`, `timezone`, `language`, `homepageid`, `date_created`, `last_modified`, `lastlogin`, `status_id`, `legacyid`, `legacypassword`, `public_id`, `allow_calendar_subscription`, `default_schedule_id`) VALUES (1,'admin','user','admin','admin@example.com','562c854778c21bd22a40422d20cce7c0609d2aee','194389c6','','','','America/Los_Angeles','en_us',1,'2015-08-10 22:13:33','2015-08-10 22:13:33','2015-08-10 22:13:33',1,NULL,NULL,'55c9220d3d005',0,NULL);

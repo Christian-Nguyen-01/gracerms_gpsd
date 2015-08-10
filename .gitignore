@@ -1,0 +1,11 @@
+*.log
+*.sw[op]
+tmp
+tmp/**/*
+tpl/**/*
+tpl_c/**/*
+
+config/config.php
+
+.vagrant
+.vagrant/*
