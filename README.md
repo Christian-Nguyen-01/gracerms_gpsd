@@ -15,6 +15,5 @@
 You should now be up and ready for development.
 
 To restart the server when you have made updates:
-- `vagrant ssh`
-- `sudo service httpd restart`
+- `vagrant ssh -c "sudo service httpd restart"`
 
