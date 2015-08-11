@@ -3,6 +3,7 @@
 tmp
 tmp/**/*
 tpl/**/*
+tpl_c
 tpl_c/**/*
 
 config/config.php
