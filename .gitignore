@@ -6,6 +6,7 @@ tpl/**/*
 tpl_c/**/*
 
 config/config.php
+config/config.prod.php
 
 .vagrant
 .vagrant/*
