@@ -5,6 +5,9 @@
 
 cd /var/www/rms
 
+mkdir tpl_c
+chmod a+w tpl tpl_c
+
 cp config/config.dist.php config/config.php
 
 # Install RPMs and gems
