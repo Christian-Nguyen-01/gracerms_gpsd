@@ -10,7 +10,7 @@
   - See https://docs.vagrantup.com/v2/getting-started/up.html for more info on
     vagrant commands. Your first time this will download a centos6 image and
     all packages, it can take a while.
-- Point your browser to `localhost:9000` and log in with username: `admin`, password: `abc123`
+- Point your browser to `http://127.0.0.1:9000` and log in with username: `admin`, password: `abc123`
 
 You should now be up and ready for development.
 
